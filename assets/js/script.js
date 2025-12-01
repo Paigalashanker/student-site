@@ -17,10 +17,10 @@
     }
   });
 
-  // Download search filter
+  // Download search filter (for static download cards)
   const search = document.getElementById('searchInput');
-  if(search){
-    const grid = document.getElementById('downloadGrid');
+  const grid = document.getElementById('downloadGrid');
+  if (search && grid) {
     search.addEventListener('input', ()=>{
       const q = search.value.toLowerCase();
       const cards = grid.querySelectorAll('.download-card');
@@ -34,6 +34,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const grid = document.getElementById("downloadGrid");
     const searchInput = document.getElementById("searchInput");
+
+    // If there's no download grid on this page, nothing to do here.
+    if (!grid) return;
 
     // Your backend API
     const API_URL = "https://download-backend-g3vo.onrender.com/files";
@@ -51,15 +54,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             displayFiles(allFiles);
 
-            // Search filter
-            searchInput.addEventListener("input", () => {
+            // Search filter (only if the input exists)
+            if (searchInput) {
+              searchInput.addEventListener("input", () => {
                 const text = searchInput.value.toLowerCase();
                 const filtered = allFiles.filter(item =>
-                    item.title.toLowerCase().includes(text) ||
-                    item.type.toLowerCase().includes(text)
+                  item.title.toLowerCase().includes(text) ||
+                  item.type.toLowerCase().includes(text)
                 );
                 displayFiles(filtered);
-            });
+              });
+            }
 
         } catch (err) {
             console.error("Failed to load files", err);
