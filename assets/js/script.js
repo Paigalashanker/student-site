@@ -31,3 +31,64 @@
     });
   }
 })();
+document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.getElementById("downloadGrid");
+    const searchInput = document.getElementById("searchInput");
+
+    // Your backend API
+    const API_URL = "https://download-backend-g3vo.onrender.com/files";
+
+    async function loadFiles() {
+        try {
+            const res = await fetch(API_URL);
+            const data = await res.json();
+
+            const allFiles = [
+                ...data.pdfs.map(f => ({ ...f, type: "PDF" })),
+                ...data.extensions.map(f => ({ ...f, type: "EXTENSION" })),
+                ...data.tools.map(f => ({ ...f, type: "TOOL" }))
+            ];
+
+            displayFiles(allFiles);
+
+            // Search filter
+            searchInput.addEventListener("input", () => {
+                const text = searchInput.value.toLowerCase();
+                const filtered = allFiles.filter(item =>
+                    item.title.toLowerCase().includes(text) ||
+                    item.type.toLowerCase().includes(text)
+                );
+                displayFiles(filtered);
+            });
+
+        } catch (err) {
+            console.error("Failed to load files", err);
+        }
+    }
+
+    function displayFiles(files) {
+        grid.innerHTML = "";
+
+        if (files.length === 0) {
+            grid.innerHTML = "<p>No matching files found.</p>";
+            return;
+        }
+
+        files.forEach(file => {
+            const card = document.createElement("div");
+            card.className = "download-card";
+
+            card.innerHTML = `
+                <h4>${file.title} (${file.type})</h4>
+                <p>Auto-generated resource file.</p>
+                <a class="btn" href="${API_URL.replace("/files","")}${file.url}" download>
+                    Download
+                </a>
+            `;
+
+            grid.appendChild(card);
+        });
+    }
+
+    loadFiles();
+});
