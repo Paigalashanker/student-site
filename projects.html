@@ -3,16 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projects — AI & DS Student</title>
+  <title>Projects — ALDS Portfolio</title>
+
   <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+  <!-- NAVBAR -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
         <div class="logo">ALDS</div>
         <div class="tag">Projects</div>
       </div>
+
       <nav class="nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link active">Projects</a>
@@ -23,27 +29,45 @@
     </div>
   </header>
 
+  <!-- HERO TITLE -->
   <main class="container">
-    <h1>Projects</h1>
-    <div class="grid" id="projectList">
-      <div class="project-card">
-        <img src="assets/img/project1.png" alt="">
-        <h4>AI Phishing Detection (Prototype)</h4>
-        <p>Machine learning + threat-intel fusion. Backend prototype ready.</p>
-        <div class="meta">Tech: Python, scikit-learn, FastAPI</div>
+
+    <section class="hero" style="padding: 60px 0 20px;">
+      <h1 style="font-size:50px;">
+        My <span class="highlight">Projects</span>
+      </h1>
+      <p class="lead">
+        A collection of intelligent tools, prototypes and applied AI systems  
+        built with discipline and curiosity.
+      </p>
+    </section>
+
+    <!-- PROJECT GRID -->
+    <div class="grid" id="projectList" style="margin-top: 30px;">
+
+      <!-- PROJECT CARD 1 -->
+      <div class="card" style="padding: 20px;">
+        <img src="assets/img/project1.png" alt="" style="width:100%; height:160px; object-fit:cover; border-radius:12px;">
+        <h3 style="font-size:22px; margin:12px 0 6px;">AI Phishing Detection (Prototype)</h3>
+        <p style="color:#4d4b63;">Machine learning + threat-intel fusion. Backend prototype built for early testing.</p>
+        <div class="meta" style="margin-top:10px; color:#6d6a85;">Tech: Python, scikit-learn, FastAPI</div>
         <a class="link" href="https://github.com/your-repo-placeholder">GitHub</a>
       </div>
 
-      <div class="project-card">
-        <img src="assets/img/project2.png" alt="">
-        <h4>Network Visualizer</h4>
-        <p>Interactive visualization of neural nets and activations.</p>
-        <div class="meta">Tech: React (demo), D3.js</div>
+      <!-- PROJECT CARD 2 -->
+      <div class="card" style="padding: 20px;">
+        <img src="assets/img/project2.png" alt="" style="width:100%; height:160px; object-fit:cover; border-radius:12px;">
+        <h3 style="font-size:22px; margin:12px 0 6px;">Network Visualizer</h3>
+        <p style="color:#4d4b63;">Interactive visual layer explorer showing activations and connections.</p>
+        <div class="meta" style="margin-top:10px; color:#6d6a85;">Tech: React, D3.js</div>
         <a class="link" href="https://github.com/your-repo-placeholder">GitHub</a>
       </div>
+
     </div>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>AI & DS Student • SREC • 2024–2028</div>
@@ -51,5 +75,6 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+
 </body>
 </html>

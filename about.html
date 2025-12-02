@@ -1,18 +1,23 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About — AI & DS Student</title>
+  <title>About — ALDS Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+  <!-- NAVBAR -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
         <div class="logo">ALDS</div>
         <div class="tag">AI & Data Science • SREC</div>
       </div>
+
       <nav class="nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
@@ -20,31 +25,65 @@
         <a href="about.html" class="nav-link active">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
+
       <button class="theme-toggle" id="themeToggle2" aria-label="Toggle theme">🌓</button>
     </div>
   </header>
 
-  <main class="container about">
-    <h1>About</h1>
-    <p>I am a 2nd-year Artificial Intelligence & Data Science student at Sree Rama Engineering College (SREC), Tirupati. Passionate about solving real-world problems with intelligent systems — especially in cybersecurity and applied AI.</p>
+  <!-- HERO-LIKE INTRO -->
+  <main class="container">
+    <section class="hero" style="padding: 60px 0 30px;">
+      <h1 style="font-size:50px;">
+        About <span class="highlight">Me</span>
+      </h1>
+      <p class="lead">
+        A second-year AI & Data Science student at Sree Rama Engineering College,  
+        building intelligent systems with clarity, discipline, and purpose.
+      </p>
+    </section>
 
-    <section class="skills">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>Python • Pandas • NumPy</li>
-        <li>Machine Learning • scikit-learn • XGBoost</li>
-        <li>FastAPI • Flask • REST APIs</li>
-        <li>HTML • CSS • JavaScript • Chrome Extensions</li>
-        <li>Git • GitHub • Cloud basics</li>
+    <!-- ABOUT CONTENT -->
+    <section class="card" style="margin-top: 30px;">
+      <h2 style="font-family:'Inter',sans-serif; font-size:28px; margin-bottom:12px;">
+        Who I Am
+      </h2>
+      <p style="color:#4d4b63; line-height:1.6;">
+        I am an AI & DS student focused on solving real-world problems through applied intelligence.
+        I work across machine learning, backend systems, automation, and cybersecurity —
+        building tools that are clean, effective, and privacy-respecting.
+      </p>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="card" style="margin-top: 30px;">
+      <h2 style="font-family:'Inter',sans-serif; font-size:28px; margin-bottom:12px;">
+        Technical Skills
+      </h2>
+
+      <ul style="margin-top:10px; line-height:1.8; color:#4d4b63;">
+        <li><strong>Python</strong> — Pandas, NumPy, Data Pipelines</li>
+        <li><strong>Machine Learning</strong> — scikit-learn, XGBoost, Evaluation</li>
+        <li><strong>Backend</strong> — FastAPI, Flask, REST APIs</li>
+        <li><strong>Frontend</strong> — HTML, CSS, JavaScript, Chrome Extensions</li>
+        <li><strong>Tools</strong> — Git, GitHub, Cloud Basics</li>
       </ul>
     </section>
 
-    <section class="values">
-      <h2>Purpose</h2>
-      <p>Build tools that protect users, improve learning and make complex systems simple. Focus on integrity, privacy, and utility.</p>
+    <!-- PURPOSE SECTION -->
+    <section class="card" style="margin-top: 30px;">
+      <h2 style="font-family:'Inter',sans-serif; font-size:28px; margin-bottom:12px;">
+        Purpose
+      </h2>
+      <p style="color:#4d4b63; line-height:1.6;">
+        My mission is to create systems that protect users, simplify complex ideas,
+        and enable learning with integrity.  
+        Each project I build focuses on <strong>privacy</strong>, <strong>clarity</strong>, and <strong>utility</strong>.
+      </p>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>AI & DS Student • SREC • 2024–2028</div>
@@ -53,5 +92,6 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+
 </body>
 </html>

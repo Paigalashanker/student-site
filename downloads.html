@@ -3,16 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Downloads — AI & DS Student</title>
+  <title>Downloads — ALDS Portfolio</title>
+
   <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+  <!-- NAVBAR -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
         <div class="logo">ALDS</div>
         <div class="tag">Resources & Downloads</div>
       </div>
+
       <nav class="nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
@@ -23,30 +29,67 @@
     </div>
   </header>
 
+  <!-- HERO TITLE -->
   <main class="container">
-    <h1>Downloads</h1>
 
-    <div class="download-controls">
-      <input id="searchInput" placeholder="Search resources (name, type)" />
-    </div>
+    <section class="hero" style="padding: 60px 0 20px;">
+      <h1 style="font-size:50px;">
+        Download <span class="highlight">Center</span>
+      </h1>
+      <p class="lead">
+        Tools, notes, extensions, and resources — neatly organized and ready to use.
+      </p>
+    </section>
 
-    <div class="grid" id="downloadGrid">
-      <!-- Example card format: put real files into assets/downloads/ -->
-      <div class="download-card">
-        <h4>DevTools Pro Extension (ZIP)</h4>
-        <p>Chrome extension for inspecting components (demo).</p>
+    <!-- SEARCH BAR -->
+    <section class="card" style="padding: 24px; margin-top: 25px;">
+      <h2 style="font-size: 24px; margin-bottom: 12px; font-family:'Inter',sans-serif;">
+        Search Resources
+      </h2>
+
+      <input 
+        id="searchInput"
+        placeholder="Search by name or file type"
+        style="
+          width:100%; padding:14px; 
+          background:white; 
+          border-radius:12px; border:1px solid #ddd; 
+          font-size:15px;
+          margin-top:8px;
+        "
+      />
+    </section>
+
+    <!-- DOWNLOAD GRID -->
+    <div class="grid" id="downloadGrid" style="margin-top: 30px;">
+
+      <!-- Download Card 1 -->
+      <div class="card" style="padding: 22px;">
+        <h3 style="font-size:20px; margin-bottom:6px;">DevTools Pro Extension (ZIP)</h3>
+        <p style="color:#4d4b63; margin-bottom:12px;">
+          Chrome extension for inspecting components (demo).
+        </p>
         <a class="btn" href="assets/downloads/devtools-pro.zip" download>Download ZIP</a>
       </div>
 
-      <div class="download-card">
-        <h4>SQL & Python Notes (PDF)</h4>
-        <p>Handwritten notes converted to PDF for study.</p>
+      <!-- Download Card 2 -->
+      <div class="card" style="padding: 22px;">
+        <h3 style="font-size:20px; margin-bottom:6px;">SQL & Python Notes (PDF)</h3>
+        <p style="color:#4d4b63; margin-bottom:12px;">
+          Handwritten notes converted into PDF for study.
+        </p>
         <a class="btn" href="assets/downloads/notes-sql-python.pdf" download>Download PDF</a>
       </div>
+
     </div>
-    <p class="note">To add files: place them in <code>/assets/downloads/</code> and update this page with a new card.</p>
+
+    <p class="note" style="margin-top: 20px;">
+      To add files: place them in <code>/assets/downloads/</code> and create a new card above.
+    </p>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>AI & DS Student • SREC • 2024–2028</div>
@@ -54,5 +97,6 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+
 </body>
 </html>

@@ -1,18 +1,24 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — AI & DS Student</title>
+  <title>Contact — ALDS Portfolio</title>
+
   <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+  <!-- NAVBAR -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
         <div class="logo">ALDS</div>
         <div class="tag">Contact</div>
       </div>
+
       <nav class="nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
@@ -23,23 +29,61 @@
     </div>
   </header>
 
-  <main class="container contact">
-    <h1>Contact</h1>
-    <p>To keep privacy, contact is handled via a simple form which will open your email client. (You can replace the mailto with a proper backend later.)</p>
+  <!-- HERO / TITLE -->
+  <main class="container">
 
-    <form class="contact-form" action="mailto:your-test-email@example.com" method="GET" enctype="text/plain">
-      <label>
-        Subject
-        <input name="subject" placeholder="Subject">
-      </label>
-      <label>
-        Message
-        <textarea name="body" placeholder="Write your message..."></textarea>
-      </label>
-      <div><button class="btn" type="submit">Send</button></div>
-    </form>
+    <section class="hero" style="padding: 60px 0 30px;">
+      <h1 style="font-size:50px;">
+        Get In <span class="highlight">Touch</span>
+      </h1>
+      <p class="lead">
+        Reach out privately and directly.  
+        This form opens your email client — no data stored anywhere.
+      </p>
+    </section>
+
+    <!-- CONTACT FORM CARD -->
+    <section class="card" style="margin-top: 25px; padding: 32px;">
+      <h2 style="font-family:'Inter',sans-serif; font-size:28px; margin-bottom:16px;">
+        Contact Form
+      </h2>
+
+      <form class="contact-form" action="mailto:your-test-email@example.com" method="GET" enctype="text/plain">
+
+        <label style="display:block; margin-bottom:16px; font-weight:600;">
+          Subject
+          <input 
+            name="subject" 
+            placeholder="Subject"
+            style="
+              width:100%; padding:12px; margin-top:6px;
+              border-radius:12px; border:1px solid #ddd;
+              font-size:15px; 
+            "
+          >
+        </label>
+
+        <label style="display:block; margin-bottom:18px; font-weight:600;">
+          Message
+          <textarea 
+            name="body" 
+            placeholder="Write your message..."
+            style="
+              width:100%; height:140px; padding:12px; margin-top:6px;
+              border-radius:12px; border:1px solid #ddd;
+              font-size:15px; resize:vertical;
+            "
+          ></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send Message</button>
+
+      </form>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>AI & DS Student • SREC • 2024–2028</div>
@@ -47,5 +91,6 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+
 </body>
 </html>
