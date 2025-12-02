@@ -48,17 +48,27 @@
         Contact Form
       </h2>
 
-      <form class="contact-form" action="mailto:your-test-email@example.com" method="GET" enctype="text/plain">
+      <form action="https://formsubmit.co/paigalashanker@gmail.com" method="POST">
+
+        <!-- Disable CAPTCHA (optional but cleaner) -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Redirect after submission (optional) -->
+        <input type="hidden" name="_next" value="https://your-website-url-here/contact.html">
 
         <label style="display:block; margin-bottom:16px; font-weight:600;">
           Subject
           <input 
             name="subject" 
             placeholder="Subject"
+            required
             style="
-              width:100%; padding:12px; margin-top:6px;
-              border-radius:12px; border:1px solid #ddd;
-              font-size:15px; 
+              width:100%; 
+              padding:12px; 
+              margin-top:6px;
+              border-radius:12px; 
+              border:1px solid #ddd;
+              font-size:15px;
             "
           >
         </label>
@@ -66,12 +76,18 @@
         <label style="display:block; margin-bottom:18px; font-weight:600;">
           Message
           <textarea 
-            name="body" 
+            name="message" 
             placeholder="Write your message..."
+            required
             style="
-              width:100%; height:140px; padding:12px; margin-top:6px;
-              border-radius:12px; border:1px solid #ddd;
-              font-size:15px; resize:vertical;
+              width:100%; 
+              height:140px; 
+              padding:12px; 
+              margin-top:6px;
+              border-radius:12px; 
+              border:1px solid #ddd;
+              font-size:15px; 
+              resize:vertical;
             "
           ></textarea>
         </label>
