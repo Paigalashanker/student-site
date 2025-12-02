@@ -176,3 +176,14 @@ body {
   .nav { flex-wrap: wrap; }
   .features { flex-direction: column; }
 }
+
+/* SVG pulse animation for decorative paths */
+svg path {
+  animation: pulse 2.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { stroke-opacity: 0.6; }
+  50% { stroke-opacity: 1; }
+  100% { stroke-opacity: 0.6; }
+}
